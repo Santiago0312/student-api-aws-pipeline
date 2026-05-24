@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - cd student-api
+      - npm ci
+  pre_build:
+    commands:
+      - npm test
+  build:
+    commands:
+      - echo "Preparando artefacto para Elastic Beanstalk"
+
+artifacts:
+  base-directory: student-api
+  files:
+    - package.json
+    - package-lock.json
+    - Procfile
+    - src/**/*
