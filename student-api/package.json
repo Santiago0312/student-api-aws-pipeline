@@ -1,0 +1,14 @@
+{
+  "name": "student-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "API RESTful para gestion de estudiantes usando Node.js y contenedores.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node test/app.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
